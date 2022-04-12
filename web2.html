@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<title>KHAN MEDICAL STORE</title>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width , initial-scale=1" >
+        <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+        <style>
+    
+    .btn {
+   border: none;
+   background-color: inherit;
+   padding: 14px 85px;
+   font-size: 16px;
+   cursor: pointer;
+   display: inline-block;
+    }
+   .btn:hover {background: #eee;}
+   .success {color: green;}
+   .info {color: dodgerblue;}
+   .warning {color: orange;}
+   .danger {color: red;}
+   .default {color: black;}
+    
+
+        .hero-image{
+            background-image: url('doctor.jpg');
+            height:800px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            opacity: 0.7; 
+        }
+
+        .hero-text{
+            text-align: center;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(235, 86, 17);
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=radio] {
+        accent-color: green;
+        }
+
+        body{
+            background-color: rgb(176, 223, 241);;
+        }
+        .search-box{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: rgb(235, 86, 17);
+            height:40px;
+            border-radius: 40px;
+            padding: 10px;
+             }
+
+         .search-box:hover > .search-txt{
+             width: 240px;
+             padding: 0.6px;
+
+         }
+         
+         .search-box:hover > .search-btn{
+             background: white;
+         }
+         
+         .search-btn{
+             color: #e84118;
+             float: right;
+             width: 40px;
+             height: 40px;
+             border-radius: 50%;
+             background: #fdfdfd;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             transition: 0.4s;
+         }
+        .search-txt{
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            color: white;
+            font-size: 16px;
+            transition: 0.4s;
+            line-height: 40px;
+            width: 0px;
+        }
+     
+        </style>
+    </head>
+<body>
+       
+     <div class="hero-image">    
+        <button class="btn success">HOME</button>
+        <button class="btn info">MEDICINE</button>
+        <button class="btn warning">RATE LIST</button>
+        <button class="btn danger">STOCK</button>
+        <button class="btn default">HOME DELIEVERY</button>
+    </div>
+
+         <div class="hero-text">
+         <h1>PROVIDING EXCELENT MEDICAL FACILITY</h1>
+         <h2>FOR DOCTOR APPOINTMENT</h2>
+         <button>APPOINTMENT</button>
+        </div><br><br><br>
+
+
+<div class="search-box">
+<input class="search-txt" type="text" name="" placeholder="Type Anything">
+<a class="search-btn" href="#">
+<i class="fa-solid fa-magnifying-glass"></i>
+</a>
+</div>
+
+
+
+       
+</body>
+</html>     
