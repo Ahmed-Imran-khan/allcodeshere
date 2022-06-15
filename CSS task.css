@@ -1,0 +1,167 @@
+body{
+    background-color: black;
+
+}
+img{
+padding: 25px 9px 0px 50px;
+}
+h1{
+    text-align: right;
+    color: rgb(102, 167, 27);
+    font-size: 20px;
+    padding: 0px 20px 0px 0px;
+}
+h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: gray;
+    margin-left:  180px;
+    margin-top: 120px;
+}
+h3{
+    font-size: 50px;
+    color: white;
+    margin-left: 180px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+.image{
+    background-image:url(./leave.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    padding-bottom: 50px;
+}
+a:link{
+    border: 2px solid white;
+    background-color: none;
+    text-decoration: none;
+    padding: 15px;
+    margin-left:50px;
+    color: white;
+    position: relative;
+    left: 150px;
+    
+}
+.a{
+    text-align: center;
+    color: rgb(12, 12, 12);
+    margin-bottom: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.b{
+    text-align: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 70px;
+    margin-top: 1px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.BC{
+    border: 2px solid rgb(4, 167, 72);
+    background-color: rgb(4, 167, 72);
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+.C{
+    color: rgb(12, 12, 12);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.D{
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.E{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.BCW{
+    border: 2px solid white;
+    background-color: white;
+    margin-top: 0px;
+    padding-top: 100px;
+    padding-bottom: 250px;
+    
+}
+.f{
+    text-align: center;
+    color: rgb(4, 167, 72);
+    margin-bottom: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+.g{
+    text-align: center;
+    color: rgb(12, 12, 12);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    margin-top: 1px;
+    margin-bottom: 90px;
+    font-weight: bold;
+}
+.h{
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 20px;
+   font-weight:bold;
+}
+.i{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+.j{
+    float: left;
+}
+.BCB{
+    border: 2px solid rgb(7, 7, 7);
+    background-color: rgb(8, 8, 8);
+    padding-bottom:150px;
+    padding-top: 50px;
+    margin-top: 20px;
+}
+.k{
+    text-align: center;
+    color: rgb(4, 167, 72);
+    margin-bottom: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+}
+.l{
+    text-align: center;
+    color: rgb(243, 239, 239);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    margin-top: 1px;
+    margin-bottom: 90px;
+    font-weight: bold; 
+}
+.m{
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+}
+.BCG{
+    border: 2px solid rgb(218, 213, 213);
+    margin-top: 0px;
+    background-color: rgb(218, 213, 213);
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+.o{
+    text-align: center;
+    color: rgb(8, 8, 8);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    margin-top: 1px;
+    margin-bottom: 90px;
+    font-weight: bold; 
+}
