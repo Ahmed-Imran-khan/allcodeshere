@@ -1,73 +1,17 @@
-.nav {
-    width: 60%;
-    margin-left: 5px;
-}
-
-.nav-item a {
-    color: white;
-}
-
-.nav-item a:hover {
-    color: rgb(250, 153, 8);
-}
-
-.SELL {
-    width: 10%;
-    position: relative;
-    margin-left: 60px;
-    margin-top: 7px;
-    color: white;
-    cursor: pointer;
-}
-
-.SELL:hover {
-    color: rgb(255, 200, 97);
-    width: 10%;
-    position: relative;
-    margin-left: 60px;
-    margin-top: 7px;
-}
 
 .Pri {
-    width: 3.5%;
-    height: 25px;
     color: darkorange;
-    margin-left: 20px;
-    margin-right: 30px;
-    margin-top: 7px;
-    cursor: pointer;
-}
-
-.Pri:hover {
-    width: 3.5%;
-    height: 25px;
-    color: rgb(255, 208, 0);
-    margin-left: 20px;
-    margin-right: 30px;
-    margin-top: 7px;
-}
-
-input {
-    width: 60%;
-    height: 50px;
-    border: none;
-    border-radius: 4px;
 }
 
 button {
-    border: none;
     background-color: rgb(60, 148, 248);
-    color: white;
-    font-size: 15px;
 }
 
 button:hover {
     border: none;
     background-color: rgb(163, 205, 253);
     color: white;
-    font-size: 15px;
 }
-
 .vector img {
     border: 8px double white;
     opacity: 0.8;
@@ -75,6 +19,8 @@ button:hover {
 
 .vector img:hover {
     opacity: 1;
+    transform: scale(1.1);
+    transition: transform 1s;
 }
 
 .ilus img {
@@ -84,6 +30,8 @@ button:hover {
 
 .ilus img:hover {
     opacity: 1;
+    transform: scale(1.1);
+    transition: transform 1s;
 }
 
 .photo img {
@@ -93,6 +41,8 @@ button:hover {
 
 .photo img:hover {
     opacity: 1;
+    transform: scale(1.1);
+    transition: transform 1s;
 }
 
 .temp img {
@@ -102,6 +52,8 @@ button:hover {
 
 .temp img:hover {
     opacity: 1;
+    transform: scale(1.1);
+    transition: transform 1s;
 }
 
 .Font img {
@@ -111,6 +63,8 @@ button:hover {
 
 .Font img:hover {
     opacity: 1;
+    transform: scale(1.1);
+    transition: transform 1s;
 }
 
 .mock img {
@@ -119,7 +73,10 @@ button:hover {
 }
 
 .mock img:hover {
+    cursor: pointer;
     opacity: 1;
+    transform: scale(1.1);
+    transition: transform 1s;
 }
 
 .back img {
@@ -128,21 +85,40 @@ button:hover {
 }
 
 .back img:hover {
+    cursor: pointer;
     opacity: 1;
+    transform: scale(1.1);
+    transition: transform 1s;
 }
 
+.party img:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+.p-1:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: transform 1s;
+
+}
+.m-2:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: transform 1s;
+
+}
 .cont {
     background-color: rgb(252, 217, 223);
-    width: 100%;
-    height: 80px;
 }
 
 .cont p {
-    color: red;
     font-size: 18px;
     font-weight: 600;
-    margin-top: 30px;
-    margin-left: 130px;
 }
 
 #pp {
@@ -156,9 +132,47 @@ button:hover {
     height: 40px;
     border-radius: 8%;
     background-color: rgb(255, 87, 87);
-    color: white;
     font-size: 18px;
     font-weight: 500;
-    margin-left: 30px;
-    margin-top: 23px;
+
+}
+.party {
+    width: 48%;
+}
+.wepik button{
+    background-color:  rgb(97, 97, 226);
+    font-weight: bold;
+}
+.wepik button:hover{
+    background-color:rgb(77, 77, 228);
+}
+.image{
+    width: 100%;
+    height: 450px;
+}
+.image img{
+    width: 100%;
+    height: 450px;
+}
+.Lblue{
+    width: 50%;
+
+}
+.Lblue button{
+    background-color:  rgb(97, 97, 226);
+    font-weight: bold;
+}
+.Lblue button:hover{
+    background-color:rgb(77, 77, 228);
+    font-weight: bold;
+}
+.imge{
+margin-left: 150px;
+}
+
+th{
+    color: white;
+}
+td{
+    color: #6b8da7;font-weight: 400;font-size: 15px;
 }
