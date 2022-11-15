@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="icon" type="image/x-icon" href="calculator-removebg-preview.png">
+</head>
+<style>
+    body {
+        background-color: white;
+    }
+
+    .C-body {
+        width: 300px;
+        height: 520px;
+        background-color: rgb(6, 6, 6);
+        position: relative;
+        padding-top: 10px;
+    }
+
+    input[type=text] {
+        position: relative;
+        width: 249px;
+        height: 55px;
+        margin-left: 0px;
+        margin-top: 0px;
+        font-size: 50px;
+        background-color: rgb(68, 255, 0);
+        text-align: right;
+        border: none;
+    }
+
+    #num-C,
+    #num-DE,
+    #num-CE {
+        width: 55px;
+        height: 65px;
+        font-size: 30px;
+        color: black;
+        border: none;
+    }
+
+    #num-9,
+    #num-8,
+    #num-7,
+    #num-6,
+    #num-5,
+    #num-4,
+    #num-3,
+    #num-2,
+    #num-1,
+    #num-s,
+    #num-add {
+        width: 55px;
+        height: 65px;
+        font-size: 40px;
+        color: black;
+        border: none;
+
+    }
+
+    #num-eq {
+        width: 55px;
+        height: 65px;
+        font-size: 40px;
+        color: black;
+        margin: 5px;
+    }
+
+    .buttons {
+        position: absolute;
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    .grid-item {
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <center>
+        <div class="C-body">
+            <input id="inputext" name="screen" type="text"></input>
+            <input id="inputext2" name="screen" type="text"></input>
+            <div class="buttons">
+                <button id="num-C" class="grid-item" onclick="CLEAR()">C</button>
+                <button id="num-DE" class="grid-item" onclick="calculate()">DE</button>
+                <button id="num-9" class="grid-item" onclick="calculate('.')">.</button>
+                <button id="num-CE" class="grid-item" onclick="calculate()">CE</button>
+                <button id="num-9" class="grid-item" onclick="calculate(9)">9</button>
+                <button id="num-8" class="grid-item" onclick="calculate(8)">8</button>
+                <button id="num-7" class="grid-item" onclick="calculate(7)">7</button>
+                <button id="num-6" class="grid-item" onclick="calculate(6)">6</button>
+                <button id="num-5" class="grid-item" onclick="calculate(5)">5</button>
+                <button id="num-4" class="grid-item" onclick="calculate(4)">4</button>
+                <button id="num-3" class="grid-item" onclick="calculate(3)">3</button>
+                <button id="num-2" class="grid-item" onclick="calculate(2)">2</button>
+                <button id="num-1" class="grid-item" onclick="calculate(1)">1</button>
+                <button id="num-1" class="grid-item" onclick="calculate(0)">0</button>
+                <button id="num-add" class="grid-item" onclick="Add()">+</button>
+                <button id="num-s" class="grid-item" onclick="sub()">-</button>
+                <button id="num-s" class="grid-item" onclick="calculate('*')">x</button>
+                <button id="num-s" class="grid-item" onclick="calculate('/')">/</button>
+                <button id="num-s" class="grid-item" onclick="calculate('%')">%</button>
+                <button class="equal" id="num-eq" class="grid-item" onclick="Result()">=</button>
+            </div>
+        </div>
+        <h2 id="variable2"></h2>
+    </center>
+    <script>
+
+        var output = document.getElementById("inputext");
+        var output2 = document.getElementById("inputext2");
+
+        function calculate(number) {
+            output.value = output.value + number;
+        }
+
+        function Add() {
+            output = output2;
+            document.getElementById("inputext2").innerHTML = output2;
+        }
+        function Result() {
+            var Res = output + output2;
+            document.getElementById("input").value = Res;
+            document.getElementById("input2") = " ";
+        }
+
+        // function Result() {
+        //     var R = output + history;
+        //     document.getElementById("variable").innerHTML = R;
+        // }
+
+        function CLEAR() {
+            document.getElementById("inputext").value = " ";
+            document.getElementById("inputext2").value = " ";
+        }
+    </script>
+</body>
+
+</html>
