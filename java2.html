@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p {
+        width: 200px;
+        height: 50px;
+        border: 2px solid rgb(187, 250, 250);
+        background-color: rgb(187, 250, 250);
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 50px;
+        position: relative;
+    }
+
+    #btn1 {
+        width: 100px;
+        height: 30px;
+        margin-left: 573px;
+        background-color: yellow;
+        cursor: pointer;
+    }
+
+    #btn2 {
+        width: 100px;
+        height: 30px;
+        background-color: yellow;
+        cursor: pointer;
+    }
+
+    #btn1:hover,
+    #btn2:hover {
+        background-color: darkgoldenrod;
+    }
+</style>
+
+<body>
+
+    <p id="New"></p>
+    <button id="btn1" onclick="increament()">+</button>
+    <button id="btn2" onclick="decreament()">-</button>
+
+    <script>
+        var A = 0;
+        document.getElementById("New").innerHTML = A;
+        document.getElementById("New").style.color = "blue";
+        function increament() {
+            A++;
+            document.getElementById("New").innerHTML = A;
+            if (A > 0) { document.getElementById("New").style.color = "green"; }
+            if (A == 0){document.getElementById("New").style.color = "blue";}    
+        }
+        function decreament() {
+            A--;
+            document.getElementById("New").innerHTML = A;
+            if (A < 0 ) { document.getElementById("New").style.color = "red"; }
+            if (A == 0){document.getElementById("New").style.color = "blue";}    
+        }
+    </script>
+</body>
+
+</html>
