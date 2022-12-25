@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(43, 85, 67);
+    }
+
+    table,
+    td,
+    th {
+        color: blanchedalmond;
+        border: 1px solid blanchedalmond;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    th {
+        width: 200px;
+    }
+
+    #form {
+        background: rgba(0, 0, 0, 0.6);
+        width: 98%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-cont {
+        height: 250px;
+        width: 350px;
+        background-color: rgb(137, 165, 151);
+        padding: 20px 10px 20px 50px;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    input[type=text] {
+        width: 60%;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+
+    input[type=email] {
+        width: 60%;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+
+    input[type=number] {
+        margin-left: 0px;
+        margin-bottom: 10px;
+        width: 60%;
+    }
+
+    input[type=radio] {
+        margin-left: 25px;
+
+    }
+
+    button[type=button] {
+        width: 60%;
+        margin-left: 75px;
+        background: rgb(77, 148, 56);
+        border: 2px dotted greenyellow;
+    }
+
+    button[type=button]:hover {
+        width: 60%;
+        margin-left: 75px;
+        background: rgb(26, 46, 20);
+        cursor: pointer;
+    }
+
+    button[type=button]:active {
+        width: 60%;
+        margin-left: 75px;
+        background: rgb(77, 148, 56);
+    }
+
+    #cross {
+        float: right;
+        border: none;
+        border-radius: 50%;
+        font-size: 10px;
+    }
+
+    #cross:hover {
+        float: right;
+        border: none;
+        border-radius: 50%;
+        font-size: 10px;
+        background-color: greenyellow;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <h1>DATA ENTERIES VIA JAVASCRIPT</h1>
+
+    <form id="form">
+        <div class="form-cont">
+            <button id="cross" onclick="cross()">X</button>
+            <h2>ENTER YOUR DATA</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name"><br>
+            <label for="email">Email</label>
+            <input type="email" id="email"><br>
+            <label for="number">Phone No.</label>
+            <input type="number" id="phone"><br>
+            <!-- gender -->
+            <label>gender</label>
+
+            <input type="radio" id="male" name="language" value="Male">
+            <label for="male">male</label>
+            <input type="radio" id="female" name="language" value="Female">
+            <label for="female">Female</label>
+            <br><br>
+            <button type="button" id="close">Sumbit</button>
+        </div>
+    </form>
+
+    <button id="entry" onclick="myFunction()">ADD LIST</button>
+    <button onclick="myDeleteFunction()" id="entry">DELETE LIST</button>
+
+    <br><br>
+
+    <table id="myTable">
+        <tr>
+            <th>NAME</th>
+            <th>E-MAIL</th>
+            <th>PHONE NO.</th>
+            <th>GENDER</th>
+            <th>ACTION</th>
+        </tr>
+    </table>
+    <br>
+    <button id="delete" style="display:none;">delete</button>
+    <button style="display:none;" id="btn">edit</button>
+
+    <script>
+        function myDeleteFunction() {
+            document.getElementById("myTable").deleteRow(-1);
+        }
+        //Cross button
+        function cross() {
+            document.getElementById("form").style.display = "none";
+        }
+        //ADD LIST FUNCTION
+        function myFunction() {
+            document.querySelector("form").style.display = "flex";
+        };
+
+
+        var ArrayData = [];
+        var n = 0;
+
+
+        //SUBMIT FUNCTION
+        document.getElementById("close").addEventListener("click", function () {
+
+            document.querySelector("form").style.display = "none";
+
+            ArrayData[n] = { name: "", email: "", phoneNo: "", gender: "" };
+
+            //gender
+            var Male = document.getElementById("male");
+            var Female = document.getElementById("female");
+            if (Male.checked == true) {
+                ArrayData[n].gender = document.getElementById("male").value;
+            } else {
+                ArrayData[n].gender = document.getElementById("female").value;
+            }
+            //geting value from user
+            ArrayData[n].name = document.getElementById("name").value;
+            ArrayData[n].email = document.getElementById("email").value;
+            ArrayData[n].phoneNo = document.getElementById("phone").value;
+
+
+            //if else to make sure that Form is complete
+            if (ArrayData[n].name == "" || ArrayData[n].email == "" || ArrayData[n].phoneNo == "" || ArrayData[n].gender == "") {
+                alert("Complete the form");
+                document.querySelector("form").style.display = "flex";
+            }
+            else {
+                document.querySelector("form").style.display = "none";
+
+                //local storage
+                localStorage.setItem('value',
+                    JSON.stringify({
+                        name: ArrayData[n].name,
+                        email: ArrayData[n].email,
+                        phoneNo: ArrayData[n].phoneNo,
+                        gender: ArrayData[n].gender
+                    }));
+                const New = JSON.parse(localStorage.getItem('value'));
+
+                //adding table row
+                var table = document.getElementById("myTable");
+                var row = table.insertRow(-1);
+
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+
+                cell1.innerHTML = New.name;
+                cell2.innerHTML = New.email;
+                cell3.innerHTML = New.phoneNo;
+                cell4.innerHTML = New.gender;
+                cell5.innerHTML = `<button class="deletebtn">DELETE</button><button class="editrow">EDIT</button>`;
+
+                //Edit button
+                
+                document.getElementsByClassName("editrow").innerHTML = ArrayData[n];
+                cell5.addEventListener('click', EditRow);
+                console.log(ArrayData);
+
+
+                //Delete button
+                cell5.addEventListener('click', DeleteRow);
+
+                //Extra
+                //console.log(ArrayData[n]);
+                //console.log(n);
+                n++;
+
+                //to clear form next time
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("phone").value = "";
+
+            };
+        });
+        function DeleteRow(e) {
+            if (!e.target.classList.contains("deletebtn")) {
+                return;
+            }
+            const bttn = e.target;
+            bttn.closest("tr").remove();
+        };
+
+
+        function EditRow(e) {
+            if (!e.target.classList.contains("editrow")) {
+                return;
+            }
+            document.querySelector("form").style.display = "flex";
+            console.log(ArrayData[n] , "jsdkjhjcjwd");
+            
+            // document.getElementById("name").value = ArrayData[0].name;
+            // document.getElementById("email").value = ArrayData[0].email;
+            // document.getElementById("phone").value = ArrayData[0].phoneNo;
+        };
+
+    </script>
+</body>
+
+</html>
