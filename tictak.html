@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="tictak.js"></script>
+        <link rel="icon" type="image/x-icon" href="./download.png">
+    <title>TicTak</title>
+</head>
+
+<body class="bg-warning">
+    <div class="container my-5">
+        <h1>TickTak</h1>
+        <div class="container text-center">
+            <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+            <div class="row">
+                <button class="col-6 col-md-2 border bg-danger fs-1 p-5" onclick="changeText1()" id="firstbox1">Start</button>
+                <button class="col-6 col-md-2 bg-primary border fs-1 p-5" onclick="changeText2()" id="firstbox2">Start</button>
+                <button class="col-6 col-md-2 border bg-danger fs-1 p-5" onclick="changeText3()" id="firstbox3">Start</button>
+            </div>
+            <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+            <div class="row">
+                <button class="col-6 col-md-2 bg-primary border fs-1 p-5" onclick="changeText4()" id="firstbox4">Start</button>
+                <button class="col-6 col-md-2 border bg-danger fs-1 p-5" onclick="changeText5()" id="firstbox5">Start</button>
+                <button class="col-6 col-md-2 bg-primary border fs-1 p-5" onclick="changeText6()" id="firstbox6">Start</button>
+            </div>
+
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row">
+                <button class="col-6 col-md-2 border bg-danger fs-1 p-5" onclick="changeText7()" id="firstbox7">Start</button>
+                <button class="col-6 col-md-2 bg-primary border fs-1 p-5" onclick="changeText8()" id="firstbox8">Start</button>
+                <button class="col-6 col-md-2 border bg-danger fs-1 p-5" onclick="changeText9()" id="firstbox9">Start</button>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
